@@ -2,9 +2,9 @@
 import Card from "../components/Card"
 import { richText } from "@/lib/models/model"
 import {Button} from "@/components/ui/button"
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 
-export default function projects(){
+export default function Projects(){
     const [projects, setProjects] = useState<richText[]>([])
     const [length, setLength] = useState(0)
     const [counter, setCounter] = useState(1)
