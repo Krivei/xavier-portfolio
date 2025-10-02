@@ -1,4 +1,4 @@
-import Icon from "../components/icon"
+import Icon from "../components/TechLogo"
 export default function Tech(){
     return <div id="tech" className="w-full sm:w-[80%] min-h-[80vh] bg-[#a6a6a6] pt-[25%] sm:pt-[10%] text-center sm:text-start">
         <h1 className="font-handwriting text-4xl sm:text-7xl text-white font-bold">My Tech Stack</h1>
