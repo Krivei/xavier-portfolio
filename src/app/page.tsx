@@ -22,7 +22,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col items-center overflow-hidden bg-[#a6a6a6]">
+    <main className="flex flex-col items-center overflow-hidden bg-[#a6a6a6]">
       <NavBar />
       <div ref={landingRef}>
         <LandingPage />
