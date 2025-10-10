@@ -29,7 +29,7 @@ export default function Projects(){
         projectPage?.scrollIntoView({behavior: "smooth"});
     }
 
-    return <div id="projects" className="w-full sm:w-[80%] min-h-[100vh] bg-[#a6a6a6] pt-[25%] sm:pt-[10%] text-center sm:text-start">
+    return <div id="projects" className="w-full sm:w-[80%] min-h-[70vh] bg-[#a6a6a6] pt-[25%] sm:pt-[10%] text-center sm:text-start">
         <h1 className="font-handwriting text-4xl sm:text-7xl text-white font-bold">Projects</h1>
         <div className="border-1 border-black w-[80%] justify-self-center lg:w-full"></div>
         <div className="w-full flex lg:justify-between p-10 flex-col lg:grid lg:grid-cols-3 gap-10 items-center">
