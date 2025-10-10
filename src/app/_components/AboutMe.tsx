@@ -1,5 +1,5 @@
 export default function AboutMe(){
-    return <div id="aboutme" className="w-full sm:w-[80%] h-[70vh] bg-[#a6a6a6] pt-[25%] sm:pt-[10%] text-center sm:text-start">
+    return <div id="aboutme" className="w-full sm:w-[80%] min-h-[70vh] bg-[#a6a6a6] pt-[25%] sm:pt-[10%] text-center sm:text-start">
         <h1 className="font-handwriting text-4xl sm:text-7xl text-white font-bold">About Me</h1>
         <div className="border-1 border-black w-[80%] justify-self-center lg:w-full"></div>
         <div className="w-full px-10 pt-15 text-white text-justify font-sans lg:text-2xl leading-relaxed">
