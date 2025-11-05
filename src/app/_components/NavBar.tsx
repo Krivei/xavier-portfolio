@@ -11,13 +11,9 @@ export default function NavBar() {
         <div className="fixed flex bg-[#bdbdbd] w-[105%] h-[10vh] shadow-lg sm:justify-center justify-end items-center gap-3 text-lg z-20">
             <div className="hidden sm:flex flex-row text-lg">
                 <a href="#home" className="hover:text-white transition duration-400 px-5">Home</a>
-                {/* <p>|</p> */}
                 <a href="#aboutme" className="hover:text-white transition duration-400 px-5">About Me</a>
-                {/* <p>|</p> */}
                 <a href="#projects" className="hover:text-white transition duration-400 px-5">Projects</a>
-                {/* <p>|</p> */}
                 <a href="#tech" className="hover:text-white transition duration-400 px-5">Tech</a>
-                {/* <p>|</p> */}
                 <a href="#contact" className="hover:text-white transition duration-400 px-5">Contact</a>
             </div>
             <div className="p-5 sm:hidden">
