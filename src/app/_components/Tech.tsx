@@ -12,7 +12,10 @@ export default function Tech(){
                     <Icon name= "CSS" url="/assets/css.png"></Icon>
                     <Icon name= "ReactJs" url="/assets/react.png"></Icon>
                     <Icon name= "NextJs" url="/assets/next.png"></Icon>
+                    <Icon name="VueJs" url="/assets/vuejs.png"></Icon>
+                    <Icon name="UIKit" url="/assets/uikit.png"></Icon>
                     <Icon name="Typescript" url="/assets/typescript.png"></Icon>
+                    
                 </div>
             </div>
             <div className=" w-full h-35 flex flex-col text-center p-3 items-center">
