@@ -19,6 +19,22 @@ export default function Projects(){
     const [counter, setCounter] = useState(1)
     const projectlist:richText[]= [
         {
+        title:"GATE x MKP GmbH",
+        text:'GATE (Gaining Agile Team Experience) is a newly introduced extracurricular program by Bauhaus University Weimar. In this program, I worked with a team of 5 other students to develop a digital solution in order to solve challenges from leading companies in the region. \n\n In this project, we collaborated with a civil engineering firm called Marx Krontal Partner GmbH (MKP GmbH). Our team developed a web application that aims to help engineers in the process of data streaming and data processing. The project focuses on the Prototypical implementation of a web-based pipeline orchestration for the integration of domain logic in Python for engineers, in which engineers can easily create pipelines with each nodes containing their customized python code. Running the pipeline will then execute each nodes sequentially and display the results side by side with the input data, allowing the user to compare the results. Due to the project being in a collaboration with a company, we made sure to write our codes as clean as possible to ensure that the code is easily understandable by the developers of the companygate.\n\n To implement the frontend of the application, I worked with VueJS, UIKit styling framework, and GitHub as a collaboration platform. The GitHub repository can be accessed [here](https://github.com/MarxKrontalPartner/gate-weimar-group-1) ',
+        image:[{
+            url:"/projects/gate1.jpeg",
+            name:"GATE",
+            width:1200,
+            height:800
+             },{
+            url:"/projects/gate2.jpeg",
+            name:"GATE2",
+            width:1200,
+            height:800
+             }
+            ]
+        },
+        {
         title:"Grow at PPIJ",
         text:'"Grow at PPI Jerman" is a Website Project by PPI Jerman that I volunteered in. We developed this website in order to aid Indonesian students in Germany navigate their career path. The website shows past and upcoming career development event and a job portal. The team, consisting of 1 project leader, 6 developers including me, 1 UI/UX designer, 2 content managers, and 2 illustrators, are currently active students in Germany. In the development of this website, a sprint meeting happens between the developers and the project leader to discuss potential flaws in the development, problems that we found between each meetings, and how we can further improve.\n\n The website was made with NextJs (A ReactJs framework), TailwindCSS, Strapi CMS, and GitHub as a developer collaboration platform. It is available through the following link: [https://growat.ppijerman.org/](https://growat.ppijerman.org/)  ',
         image:[{

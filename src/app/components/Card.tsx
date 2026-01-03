@@ -1,5 +1,4 @@
 import { richText, mapImageMedia } from "@/lib/models/model"
-import Image from "next/image"
 import Autoplay from "embla-carousel-autoplay"
 import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import {

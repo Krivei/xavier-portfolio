@@ -1,4 +1,3 @@
-import Image from "next/image";
 export default function LandingPage() {
     return (
         <div id="home" className="w-full h-[100vh] bg-[url(/assets/landing.png)] flex flex-col justify-center bg-center bg-cover p-3">
