@@ -1,22 +1,24 @@
 "use client"
+import ProjectCarousel from "./ProjectCarousel";
+
 // import Card from "../components/Card"
-import dynamic from "next/dynamic"
+// import dynamic from "next/dynamic"
 import { richText } from "@/lib/models/model"
-import {Button} from "@/components/ui/button"
-import { useEffect, useState } from "react"
+// import {Button} from "@/components/ui/button"
+// import { useEffect, useState } from "react"
 
 // lazy-load Card on the client with a loading placeholder
-const Card = dynamic(() => import("../components/Card"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-64 rounded bg-gray-200/60 animate-pulse" />
-  ),
-})
+// const Card = dynamic(() => import("../components/Card"), {
+//   ssr: false,
+//   loading: () => (
+//     <div className="w-full h-64 rounded bg-gray-200/60 animate-pulse" />
+//   ),
+// })
 
 export default function Projects(){
-    const [projects, setProjects] = useState<richText[]>([])
-    const [length, setLength] = useState(0)
-    const [counter, setCounter] = useState(1)
+    // const [projects, setProjects] = useState<richText[]>([])
+    // const [length, setLength] = useState(0)
+    // const [counter, setCounter] = useState(1)
     const projectlist:richText[]= [
         {
         title:"GATE x MKP GmbH",
@@ -129,31 +131,12 @@ export default function Projects(){
 
     ]
 
-    useEffect(() => {
-        setProjects(projectlist.slice(0, counter * 3));
-        setLength(projectlist.length);
-        }, [counter]);
-    function loadMore(){
-        setCounter(counter + 1)
-    }
-
-    function loadLess(){
-        setCounter(1)
-        const projectPage = document.getElementById("projects");
-        projectPage?.scrollIntoView({behavior: "smooth"});
-    }
-
-    return <div id="projects" className="w-full sm:w-[80%] min-h-[70vh] bg-[#a6a6a6] pt-[25%] sm:pt-[10%] text-center sm:text-start">
-        <h1 className="font-handwriting text-4xl sm:text-7xl text-white font-bold">Projects</h1>
-        <div className="border-1 border-black w-[80%] justify-self-center lg:w-full"></div>
-        <div className="w-full flex lg:justify-between p-10 flex-col lg:grid lg:grid-cols-3 gap-10 items-center">
-            {projects.map((content:richText, index:number) => (
-                <Card key={index} Content={content}/>
-            ))}
-        </div>
-        <div className="w-full flex justify-center gap-2">
-            {(counter*3<length) && <Button className="w-35 p-2 bg-neutral-600 shadow-2xl transition duration-300" onClick={loadMore}>View more</Button>}
-            {counter > 1 && <Button className="w-35 p-2 bg-neutral-600 shadow-2xl" onClick={loadLess}>View less</Button>}
-        </div>
+    return <div id="projects" className="w-screen h-screen bg-black px-3 flex flex-col items-center">
+      <div className="w-full h-[8%] flex items-center justify-center lg:mt-5">
+            <h1 className="font-handwriting lg:text-5xl text-3xl">Projects</h1>
+      </div>
+      <div className="h-[80%] flex items-center w-[80%]">
+        <ProjectCarousel projects={projectlist}></ProjectCarousel>
+      </div>
     </div>
 }

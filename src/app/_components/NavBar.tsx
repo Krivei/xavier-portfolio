@@ -1,34 +1,40 @@
-"use client"
-import { Sheet, SheetTrigger, SheetTitle, SheetContent } from "@/components/ui/sheet"
-import { useState } from "react"
-import { Menu } from "lucide-react"
+'use client';
 
-export default function NavBar() {
-    const [open, setOpen] = useState(false);
-    const handleClose = () => setOpen(false);
+interface NavProps {
+  sections: { id: string; label: string }[];
+  activeIndex: number;
+  scrollTo: (index: number) => void;
+}
 
-    return (
-        <div className="fixed flex bg-[#bdbdbd] w-[105%] h-[10vh] shadow-lg sm:justify-center justify-end items-center gap-3 text-lg z-20">
-            <div className="hidden sm:flex flex-row text-lg">
-                <a href="#home" className="hover:text-white transition duration-400 px-5">Home</a>
-                <a href="#aboutme" className="hover:text-white transition duration-400 px-5">About Me</a>
-                <a href="#projects" className="hover:text-white transition duration-400 px-5">Projects</a>
-                <a href="#tech" className="hover:text-white transition duration-400 px-5">Tech</a>
-                <a href="#contact" className="hover:text-white transition duration-400 px-5">Contact</a>
-            </div>
-            <div className="p-5 sm:hidden">
-                <Sheet open={open} onOpenChange={setOpen}>
-                    <SheetTrigger asChild className="h-10 w-10 p-1 shadow-2xl rounded-md border-2 border-gray-600 shadow-black"><Menu></Menu></SheetTrigger>
-                    <SheetTitle className="hidden">Navigation Bar</SheetTitle>
-                    <SheetContent side="right" className="bg-[#bdbdbd] font-semibold border-[#a6a6a6] pt-10 pl-5 flex flex-col gap-5 text-lg">
-                        <a href="#home" onClick={handleClose} className="">Home</a>
-                        <a href="#aboutme" onClick={handleClose}>About Me</a>
-                        <a href="#projects"onClick={handleClose}>Projects</a>
-                        <a href="#tech"onClick={handleClose}>Tech</a>
-                        <a href="#contact" onClick={handleClose}>Contact</a>
-                    </SheetContent>
-                </Sheet>
-            </div>
-        </div>
-    )
+export default function NavBar({ sections, activeIndex, scrollTo }: NavProps) {
+  return (
+    <nav className="fixed left-12 top-1/2 -translate-y-1/2 z-50 flex-col items-center gap-12 hidden sm:flex">
+      <div className="absolute w-[1px] bg-white/20 h-full -z-10" />
+      {sections.map((section, index) => {
+        const isActive = activeIndex === index;
+        
+        return (
+          <button
+            key={section.id}
+            onClick={() => scrollTo(index)}
+            className="group relative flex items-center justify-center"
+            aria-label={`Go to ${section.label}`}
+          >
+            <div className={`w-4 h-4 rounded-full transition-all duration-500 ${
+              isActive ? 'bg-white scale-150 shadow-[0_0_10px_white]' : 'bg-white hover:shadow-[0_0_10px_white]'
+            }`} />
+
+            <span className={`absolute left-8 transition-all duration-300 whitespace-nowrap px-2 py-1 rounded text-[10px] uppercase tracking-[0.2em] font-handwriting
+              ${isActive 
+                ? 'opacity-100 translate-x-0 text-white' 
+                : 'opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-gray-400'
+              }`}
+            >
+              {section.label}
+            </span>
+          </button>
+        );
+      })}
+    </nav>
+  );
 }

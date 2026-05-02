@@ -1,40 +1,126 @@
-import Icon from "../components/TechLogo"
+import { Icon } from '@iconify/react';
+
 export default function Tech(){
-    return <div id="tech" className="w-full sm:w-[80%] min-h-[80vh] bg-[#a6a6a6] pt-[25%] sm:pt-[10%] text-center sm:text-start">
-        <h1 className="font-handwriting text-4xl sm:text-7xl text-white font-bold">My Tech Stack</h1>
-        <div className="border-1 border-black w-[80%] justify-self-center lg:w-full"></div>
-        <div className=" w-full grid lg:grid-cols-3 p-3 text-white">
-            <div className=" w-full h-35 flex flex-col text-center p-3 items-center">
-                <p className="text-xl font-sans">Frontend Development</p>
-                {/* <div className="border-1 border-white w-[80%] grid grid-cols-5"/> */}
-                <div className="grid grid-cols-5 py-3">
-                    <Icon name= "HTML" url="/assets/html.png"></Icon>
-                    <Icon name= "CSS" url="/assets/css.png"></Icon>
-                    <Icon name= "ReactJs" url="/assets/react.png"></Icon>
-                    <Icon name= "NextJs" url="/assets/next.png"></Icon>
-                    <Icon name="VueJs" url="/assets/vuejs.png"></Icon>
-                    <Icon name="UIKit" url="/assets/uikit.png"></Icon>
-                    <Icon name="Typescript" url="/assets/typescript.png"></Icon>
-                    
+    return <div id="tech" className="w-screen h-screen bg-black px-3 flex flex-col items-center">
+        <div className="w-full h-[8%] flex items-center justify-center lg:mt-5">
+            <h1 className="font-handwriting lg:text-5xl text-3xl">Tech Stacks</h1>
+        </div>
+            <div className="w-full lg:w-[80%] lg:h-[90%] flex flex-col gap-1 border-white">
+                <div className="w-full flex flex-col lg:h-[70%] lg:grid lg:grid-cols-2 gap-1 lg:px-10 lg:py-5">
+                <div id="frontend" className="border-solid border-2 border-white p-1 lg:p-3 rounded-xl flex flex-col gap-1">
+                    <p className="font-handwriting text-center">Frontend Development</p>
+                    <div className='grid grid-cols-3 h-full'>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="flowbite:html-solid" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>HTML</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="flowbite:css-solid" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>CSS</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="mdi:react" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>React.Js</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="mdi:vuejs" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Vue.Js</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="ri:nextjs-fill" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Next.Js</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="simple-icons:uikit" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>UIKit</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="akar-icons:typescript-fill" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Typescript</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="akar-icons:javascript-fill" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Javascript</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="teenyicons:tailwind-solid" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>TailwindCSS</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className=" w-full h-35 flex flex-col text-center p-3 items-center">
-                <p className="text-xl font-sans">Backend & Data Management</p>
-                {/* <div className="border-1 border-white w-[80%] grid grid-cols-5"/> */}
-                <div className="grid grid-cols-2 py-3">
-                    <Icon name= "Laravel" url="/assets/laravel.png"></Icon>
-                    <Icon name= "Firebase Firestore" url="/assets/firebase.png"></Icon>
+                
+                <div id="backend" className="border-solid border-2 border-white p-1 lg:p-3 rounded-xl flex flex-col gap-1">
+                    <p className="font-handwriting text-center">Backend and Data Management</p>
+                    <div className="w-full grid grid-cols-3 lg:h-full">
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="simple-icons:strapi" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Strapi</p>
+                        </div>
+                        <div  className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="lineicons:laravel" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Laravel</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="streamline-logos:firebase-logo-solid" width="35" height="35"></Icon>
+                            <p className='font-handwriting'>Firebase</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="material-symbols:sql" width="35" height="35"></Icon>
+                            <p className='font-handwriting'>SQL</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="devicon-plain:php" width="35" height="35"></Icon>
+                            <p className='font-handwriting'>PHP</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="bxl:c-sharp" width="35" height="35"></Icon>
+                            <p className='font-handwriting'>C#</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="codicon:python" width="35" height="35"></Icon>
+                            <p className='font-handwriting'>Python</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="simple-icons:kotlin" width="35" height="30"></Icon>
+                            <p className='font-handwriting'>Kotlin</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="ri:java-fill" width="35" height="35"></Icon>
+                            <p className='font-handwriting'>Java</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <div className=" w-full h-35 flex flex-col text-center p-3 items-center">
-                <p className="text-xl font-sans">Design & Developer Tools</p>
-                {/* <div className="border-1 border-white w-[80%] grid grid-cols-5"/> */}
-                <div className="grid grid-cols-5 py-3">
-                    <Icon name= "Figma"     url="/assets/figma.png"></Icon>
-                    <Icon name= "Canva"     url="/assets/canva.png"></Icon>
-                    <Icon name= "Github"    url="/assets/github.png"></Icon>
-                    <Icon name= "Android Studio"     url="/assets/androidstudio.png"></Icon>
-                    <Icon name= "Visual Studio Code"    url="/assets/vsc.png"></Icon>
+            <div className="w-full gap-1 flex flex-col lg:px-10">
+                <div id="tools" className="w-full border-solid border-2 border-white lg:p-3 p-1 rounded-xl">
+                    <p className="font-handwriting text-center">Design and Developer Tools</p>
+                    <div className="w-full grid grid-cols-3 lg:grid-cols-6 p-2">
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="mdi:github" width="36" height="36"></Icon>
+                            <p className='font-handwriting text-center'>GitHub</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="cib:figma" width="35" height="34"></Icon>
+                            <p className='font-handwriting text-center'>Figma</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="cib:canva" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Canva</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="cib:visual-studio-code" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>VSC</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="simple-icons:androidstudio" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Android Studio</p>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <Icon className='text-white' icon="bi:unity" width="35" height="35"></Icon>
+                            <p className='font-handwriting text-center'>Unity</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
