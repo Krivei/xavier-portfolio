@@ -14,7 +14,7 @@ export default function Tech(){
                             <Icon className='text-white' icon="flowbite:html-solid" width="35" height="35"></Icon>
                             <p className='font-handwriting text-center'>HTML</p>
                         </div>
-                        <div  className='flex flex-col justify-center items-center'>
+                        <div className='flex flex-col justify-center items-center'>
                             <Icon className='text-white' icon="flowbite:css-solid" width="35" height="35"></Icon>
                             <p className='font-handwriting text-center'>CSS</p>
                         </div>
