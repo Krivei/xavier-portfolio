@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {  Geist, Geist_Mono, Open_Sans, Style_Script, Shadows_Into_Light_Two, Sofia, Homemade_Apple } from "next/font/google";
-// @ts-expect-error TS doesn't have type declarations for css side-effect imports in this project
-import "./globals.css";
+import "@/app/globals.css";
 
 const openSans = Open_Sans({
   subsets: ['latin'],
