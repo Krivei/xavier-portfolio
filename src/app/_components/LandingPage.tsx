@@ -9,7 +9,7 @@ export default function LandingPage() {
         <h1 className="text-5xl md:text-5xl font-bold mb-4 z-20 lg:translate-x-50">
           Xavier Julian Theodosius
         </h1>
-        <p className="text-md md:text-xl lg:translate-x-50">UI/UX Designer | Frontend Developer</p>
+        <p className="text-md md:text-xl lg:translate-x-50">Frontend Developer | UI/UX Designer</p>
       </div>
       <div className="absolute inset-0 z-0 pointer-events-none w-screen h-screen overflow-hidden">
         <Image
