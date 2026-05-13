@@ -6,6 +6,7 @@ import NavBar from './_components/NavBar';
 import LandingPage from './_components/LandingPage';
 import Projects from './_components/Project';
 import Tech from './_components/Tech';
+import {Analytics} from '@vercel/analytics/next';
 
 function HomeContent() {
   const SECTIONS = [
@@ -90,6 +91,8 @@ export default function HomePage() {
   return (
     <Suspense fallback={<div className="h-screen w-screen bg-black" />}>
       <HomeContent />
+      <Analytics />
     </Suspense>
+    
   );
 }
