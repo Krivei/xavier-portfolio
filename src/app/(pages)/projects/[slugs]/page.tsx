@@ -1,10 +1,6 @@
 "use client"
-import {useRouter , usePathname, useParams} from 'next/navigation'
-import { use } from "react"
-import Image from 'next/image';
+import {useParams} from 'next/navigation'
 import { richText, mapImageMedia } from "@/lib/models/model";
-import { EffectCoverflow, Pagination, Mousewheel } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -47,6 +43,16 @@ const projectlist:richText[]= [
             height:800
              }
             ]
+        },{
+            title:"Euro Puzzle",
+            text:'"Euro Puzzle" is a student project developped in the Bauhaus Gamesfabrik. The project is a puzzle game that involves physical puzzle pieces, in which the map has a scannable QR code that can be scanned to show various 3D models of each country in the European Union. To educate the players about each member of the European Union, we designed the game flow to enable tangible interactions, allowing for the possibility of better memory retention. The game was made with C# and Unity. The project was done with an agile development framework with GitHub as a version control tool and Miro as a project planner. The repository is available through the following [link](https://github.com/Krivei/Geography_quiz)',
+            image:[{
+                url:"/projects/EUFriends.jpeg",
+                name:"EuroPuzzle",
+                width:1200,
+                height:800
+            }]
+
         },
         {
          title:"Desa Segaran",
